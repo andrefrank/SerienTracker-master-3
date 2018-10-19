@@ -1,19 +1,24 @@
 //
 //  EpListViewCell.swift
-//  
+//  SerienTracker
 //
 //  Created by Andre Frank on 18.10.18.
+//  Copyright © 2018 Daniel Keglmeier. All rights reserved.
 //
 
 import UIKit
 
 class EpListViewCell: UITableViewCell {
     
+    @IBOutlet weak var epName: UILabel!
     
-    var cellInfo:ShowEpisodenInforamtion{
-        
+    @IBOutlet weak var coverLabel: UILabel!
+    
+    var cellInfo:ShowEpisodenInformation?{
+
         didSet{
-            
+            epName.text = cellInfo?.name
+            coverLabel.text = cellInfo?.airdate
         }
     }
 
