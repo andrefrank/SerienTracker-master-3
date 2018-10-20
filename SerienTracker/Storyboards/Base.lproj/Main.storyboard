@@ -25,28 +25,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="327" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="140-Zp-Z3r" userLabel="name">
-                                            <rect key="frame" x="16" y="0.0" width="264" height="37"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="140-Zp-Z3r" userLabel="name">
+                                            <rect key="frame" x="16" y="0.0" width="243" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="G2m-rb-LvV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kQ-kJ-gEg" userLabel="name">
-                                            <rect key="frame" x="16" y="37" width="135" height="37"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kQ-kJ-gEg" userLabel="name">
+                                            <rect key="frame" x="16" y="49" width="142" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="t3N-V9-atQ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxp-7l-C5I" customClass="CachedImageView" customModule="SerienTracker" customModuleProvider="target">
+                                            <rect key="frame" x="267" y="0.0" width="60" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="8Qp-vh-soh"/>
+                                                <constraint firstAttribute="height" constant="48" id="KFP-46-v1i"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9kQ-kJ-gEg" firstAttribute="top" secondItem="140-Zp-Z3r" secondAttribute="bottom" id="5EF-vw-pxr"/>
-                                        <constraint firstItem="140-Zp-Z3r" firstAttribute="top" secondItem="EX0-is-zSc" secondAttribute="top" id="aC4-4y-nZV"/>
-                                        <constraint firstItem="9kQ-kJ-gEg" firstAttribute="leading" secondItem="EX0-is-zSc" secondAttribute="leading" constant="16" id="jkI-gB-Cy9"/>
-                                        <constraint firstItem="140-Zp-Z3r" firstAttribute="leading" secondItem="EX0-is-zSc" secondAttribute="leading" constant="16" id="nnH-6k-DW1"/>
+                                        <constraint firstItem="hxp-7l-C5I" firstAttribute="leading" secondItem="140-Zp-Z3r" secondAttribute="trailing" constant="12" id="3If-Zh-mgY"/>
+                                        <constraint firstItem="hxp-7l-C5I" firstAttribute="leading" secondItem="9kQ-kJ-gEg" secondAttribute="trailing" constant="113" id="Kfa-Vy-2Nu"/>
+                                        <constraint firstItem="140-Zp-Z3r" firstAttribute="top" secondItem="EX0-is-zSc" secondAttribute="top" id="L3Z-RD-ZKG"/>
+                                        <constraint firstItem="hxp-7l-C5I" firstAttribute="centerY" secondItem="EX0-is-zSc" secondAttribute="centerY" id="XWN-2L-c5J"/>
+                                        <constraint firstItem="9kQ-kJ-gEg" firstAttribute="leading" secondItem="EX0-is-zSc" secondAttribute="leading" constant="16" id="bLg-JW-ch3"/>
+                                        <constraint firstAttribute="bottom" secondItem="9kQ-kJ-gEg" secondAttribute="bottom" constant="0.5" id="gns-Tk-dCR"/>
+                                        <constraint firstItem="140-Zp-Z3r" firstAttribute="leading" secondItem="EX0-is-zSc" secondAttribute="leading" constant="16" id="mBx-Zx-mKV"/>
+                                        <constraint firstAttribute="trailing" secondItem="hxp-7l-C5I" secondAttribute="trailing" constant="8" id="nr2-d6-e9n"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="coverLabel" destination="9kQ-kJ-gEg" id="j6r-T6-TsL"/>
+                                    <outlet property="epImageView" destination="hxp-7l-C5I" id="AVx-0W-Ngp"/>
                                     <outlet property="epName" destination="140-Zp-Z3r" id="NLU-iY-9tf"/>
                                     <segue destination="o7P-LX-Ddz" kind="show" identifier="episodeDetail" trigger="accessoryAction" id="3Il-ow-I7V"/>
                                 </connections>

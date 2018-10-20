@@ -20,6 +20,7 @@
 		65E7B91021725FC4006FA47D /* ShowEpListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7B90F21725FC4006FA47D /* ShowEpListApi.swift */; };
 		6781532E217928C300AF3CC2 /* EpListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781532D217928C300AF3CC2 /* EpListViewCell.swift */; };
 		6781533021792E7B00AF3CC2 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781532F21792E7B00AF3CC2 /* EpisodeDetailViewController.swift */; };
+		67E53990217B189000AECF90 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5398F217B189000AECF90 /* CachedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		65E7B90F21725FC4006FA47D /* ShowEpListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpListApi.swift; sourceTree = "<group>"; };
 		6781532D217928C300AF3CC2 /* EpListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpListViewCell.swift; sourceTree = "<group>"; };
 		6781532F21792E7B00AF3CC2 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		67E5398F217B189000AECF90 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		DB5049DDDD16A9401215F1D4 /* Pods_SerienTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerienTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		65E7B8F021723648006FA47D /* SerienTracker */ = {
 			isa = PBXGroup;
 			children = (
+				67E5398E217B185F00AECF90 /* Extensions */,
 				65E7B8FD21723648006FA47D /* Info.plist */,
 				65E7B8F121723648006FA47D /* AppDelegate.swift */,
 				65E7B90B217253AE006FA47D /* Constants.swift */,
@@ -118,6 +121,7 @@
 		65E7B9042172366C006FA47D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				67E5398F217B189000AECF90 /* CachedImageView.swift */,
 				6781532D217928C300AF3CC2 /* EpListViewCell.swift */,
 			);
 			path = View;
@@ -147,6 +151,13 @@
 				65E7B8FA21723648006FA47D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		67E5398E217B185F00AECF90 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7F6553F4C7178B9B31C2237E /* Frameworks */ = {
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E53990217B189000AECF90 /* CachedImageView.swift in Sources */,
 				65E7B90C217253AE006FA47D /* Constants.swift in Sources */,
 				65E7B90A2172533F006FA47D /* ShowMainApi.swift in Sources */,
 				65E7B8F421723648006FA47D /* EpListViewController.swift in Sources */,

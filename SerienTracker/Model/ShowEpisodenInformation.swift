@@ -15,7 +15,19 @@ struct ShowEpisodenInformation: Codable {
     let airdate, airtime, airstamp: String
     let runtime: Int
     let summary: String
+    let image: Image
+}
 
+
+struct Image:Codable {
+    let original:String
+    let medium:String
+
+    //Image codable protocol
+    enum CodingKeys:String, CodingKey {
+        case original = "original"
+        case medium = "medium"
     }
+}
 
 

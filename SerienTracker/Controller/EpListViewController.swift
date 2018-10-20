@@ -39,14 +39,11 @@ class EpListViewController: UITableViewController{
     }
 
         showepList.getEpList(id: 3) {[weak self] (epList) in
-            guard epList.count>0 else {return}
+            guard let epList=epList, epList.count>0 else {return}
                 
                 self?.episodeArray=epList
                 self?.tableView.reloadData()
         }
-//        print(episodeArray)
-//        sleep(5)
-//        print(episodeArray)
     }
 }
 

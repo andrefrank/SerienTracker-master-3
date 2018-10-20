@@ -14,11 +14,17 @@ class EpListViewCell: UITableViewCell {
     
     @IBOutlet weak var coverLabel: UILabel!
     
+    
+    @IBOutlet weak var epImageView:CachedImageView!
+    
     var cellInfo:ShowEpisodenInformation?{
 
         didSet{
             epName.text = cellInfo?.name
             coverLabel.text = cellInfo?.airdate
+            if let imageUrl=cellInfo?.image.original{
+                epImageView.loadImageFromUrl(imageUrl)
+            }
         }
     }
 

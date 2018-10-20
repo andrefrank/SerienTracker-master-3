@@ -11,8 +11,7 @@ import Foundation
 
 class ShowEpListApi {
     func getEpList(id: Int, complition: @escaping EpListCompletion) {
-        var episoden=[ShowEpisodenInformation]()
-        
+       
         guard let url = URL(string: "\(SHOW_URL)"+"\(id)"+"/episodes") else { return }
         print(url)
         
@@ -20,13 +19,17 @@ class ShowEpListApi {
             if let error = response.result.error {
                 print("hier")
                 print(error.localizedDescription)
-                complition(episoden)
+                complition(nil)
                 return
             }
             guard let data = response.data else { return }
             let jsonDecoder = JSONDecoder()
+            
             do {
+                
+                var episoden=[ShowEpisodenInformation]()
                 let epInfo = try jsonDecoder.decode([ShowEpisodenInformation?].self, from: data)
+                
                 for episode in epInfo {
                     if let episode = episode{
                         episoden.append(episode)
@@ -37,7 +40,7 @@ class ShowEpListApi {
             } catch {
                 print("oder hier")
                 debugPrint(error.localizedDescription)
-                complition(episoden)
+                complition(nil)
             }
         }
     }
